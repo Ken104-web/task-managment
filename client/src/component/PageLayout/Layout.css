@@ -1,12 +1,21 @@
-.container {
-    display: flex;
-  }
+
   .dashboard {
+    display: flex;
+    flex-direction: column-reverse;
     position: relative;
     width: 100%;
     z-index: 0;
   }
-  
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    overflow: hidden;
+    z-index: -1;
+  }
+
 .header {
     display: flex;
     padding: 2rem 4rem;
