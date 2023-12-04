@@ -34,39 +34,6 @@ body {
   border-radius: 20px;
   padding: 2rem;
 }
-.gradient-red {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #ff5d5d;
-  filter: blur(90px);
-}
-.gradient-orange {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: var(--orange);
-  filter: blur(90px);
-}
-.gradient-blue {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #5dc9ff;
-  filter: blur(90px);
-}
-.grey-container {
-  border-top: 0.3px solid rgba(255, 255, 255, 0.185);
-  border-bottom: 0.3px solid rgba(255, 255, 255, 0.185);
-  background: linear-gradient(
-    90deg,
-    rgba(53, 53, 53, 0) 1.21%,
-    rgba(53, 53, 53, 0.46) 49.45%,
-    rgba(53, 53, 53, 0) 103.83%
-  );
-  padding: 1.5rem 1rem;
-}
-
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
