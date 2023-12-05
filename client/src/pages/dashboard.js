@@ -1,6 +1,7 @@
 import React from "react";
 // import css from './dashboard.css';
 import './dashboard.css'
+
 const Dashboard = () => {
     return ( 
         <div className="ken">

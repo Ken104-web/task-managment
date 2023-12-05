@@ -9,9 +9,10 @@ function App() {
 
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Layout/>}/>
-
+        <Route path="/" element={<Layout />} />
       <Route path='/dashboard' element={<Dashboard/>}/>
+      {/* <Route path='/' element={<Navigate to="/dashboard" replace />}/> */}
+
     </Routes>
     </BrowserRouter>
     </div>
