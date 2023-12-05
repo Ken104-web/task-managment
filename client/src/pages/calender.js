@@ -7,12 +7,32 @@ import './calender.css'
 
 const Calendar = () => {
     return ( 
+    <div className="calender-container">
         <div>
-            <h1>
-            Calendar 
-            </h1>
-       
+            <FullCalendar
+            plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
+            headerToolbar={{
+                left: 'prev,next today',
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay"
+            }}
+            allDaySlot={false}
+            initialView="timeGridWeek"
+            slotDuration={"01:00:00"}
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            weekends={true}
+            nowIndicator={true}
+            // initialEvents={currentEvents}
+            // eventsSet={handleEvents}
+            // select={handleDateSelect}
+            // eventClick={handleEventClick}
+            />
+            </div>
         </div>
+
      );
 }
  

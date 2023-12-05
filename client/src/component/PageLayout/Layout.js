@@ -27,7 +27,7 @@ const Layout = () => {
             </div>
         </div>
         <Dashboard/>
-        <Outlet />
+        <Outlet />      
             </div>
         </>
      );
