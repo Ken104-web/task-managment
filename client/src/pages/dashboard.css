@@ -28,11 +28,13 @@
   }
   .head > :nth-child(1) {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: bold;
+    color: #fff
   }
   .durationButton > select {
     border: none;
-    background: var(--orange-gradient);
+    background: #fff;
+    /* background: var(--orange-gradient); */
     padding: 10px;
     font-weight: 500;
     border-radius: 10px;
@@ -42,6 +44,9 @@
   .cards {
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bolder;
+   color: #fff;
   } 
  
 

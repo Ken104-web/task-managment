@@ -7,7 +7,7 @@ const Dashboard = () => {
         <div className="dashboardX">
             <div className= {`$ dashboardhead, theme-container`}>
                 <div className="head">
-                    <span>Dashboard</span>
+                    <span>Hello Kenneth</span>
                     <div className="durationButton">
                         <select>
                             <option value="">1 week</option>
@@ -17,7 +17,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="cards">
-                    cards
+                    Here are your todays tasks
                 </div>
             </div>
         </div>

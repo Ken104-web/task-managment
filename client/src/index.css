@@ -30,7 +30,8 @@ body {
   overflow: hidden;
 }
 .theme-container {
-  background: rgba(0, 0, 0, 0.59);
+  background: #F25767;
+  /* background: rgba(0, 0, 0, 0.59); */
   border-radius: 20px;
   padding: 2rem;
 }
