@@ -4,10 +4,13 @@ import { AiFillCalendar, AiOutlineTable } from "react-icons/ai";
 import { FaTasks } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
+
 const Sidebar = () => {
     return ( 
         <div className='container'>
-                <img src="./task.webp" alt="logo" className='logo' />
+                <img src="./task.webp" alt="logo" className='logo'>
+
+                </img>
                 <div className='menu'>
                     <NavLink to='dashboard' className="item" title='dashboard'>
                         <MdSpaceDashboard size={30}/>

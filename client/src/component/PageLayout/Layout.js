@@ -8,7 +8,7 @@ import Sidebar from "../Sidebar/sidebar";
 
 const Layout = () => {
     return ( 
-        <div className='dashboard'>
+        <>
             <Sidebar />
             <div className="sidebar">
             <div className="header">
@@ -24,9 +24,9 @@ const Layout = () => {
                     <span>kennethwarui01@gmail.com</span>
                 </div>
             </div>
-            </div>
-            </div>
         </div>
+            </div>
+        </>
      );
 }
  

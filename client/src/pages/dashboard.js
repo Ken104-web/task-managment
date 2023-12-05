@@ -4,7 +4,10 @@ import './dashboard.css'
 const Dashboard = () => {
     return ( 
         <div>
-            Dashboard
+        <div className="dashboard">
+            cards
+        </div>
+        <div className="orders"></div>
         </div>
      );
 }
