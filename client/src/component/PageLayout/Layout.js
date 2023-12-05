@@ -3,14 +3,14 @@ import moment from "moment/moment";
 import { BiSearch } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import Sidebar from "../Sidebar/sidebar";
-import { Outlet, useLocation, Navigate} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import Dashboard from '../../pages/dashboard';
 const Layout = () => {
-    const {pathname} = useLocation()
     return ( 
         <>
 
             <Sidebar />
-            {pathname === '/' && <Navigate to='/dashboard'/>}
+            
             <div className="sidebar">
             <div className="header">
                 <span>{moment().format('dddd, Do MMM YYYY')}</span>
@@ -26,9 +26,9 @@ const Layout = () => {
                 </div>
             </div>
         </div>
+        <Dashboard/>
         <Outlet />
             </div>
-
         </>
      );
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
-import Dashboard from './pages/dashboard';
+// import Dashboard from './pages/dashboard';
 import Layout from './component/PageLayout/Layout';
 
 function App() {
@@ -10,8 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<Layout />} />
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      {/* <Route path='/' element={<Navigate to="/dashboard" replace />}/> */}
+      {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
 
     </Routes>
     </BrowserRouter>
