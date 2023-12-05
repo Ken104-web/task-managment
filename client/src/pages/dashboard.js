@@ -4,7 +4,7 @@ import './dashboard.css'
 const Dashboard = () => {
     return ( 
         <div className="ken">
-        <div className="dashboard">
+        <div className="dashboardX">
             <div className="dashboardhead">
                 <div className="head">
                     <span>Dashboard</span>

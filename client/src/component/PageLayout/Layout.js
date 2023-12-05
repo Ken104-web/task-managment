@@ -3,15 +3,15 @@ import moment from "moment/moment";
 import { BiSearch } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import Sidebar from "../Sidebar/sidebar";
-import {Navigate, Outlet, useLocation } from 'react-router-dom';
+// import {Navigate, Outlet, useLocation } from 'react-router-dom';
 
 const Layout = () => {
-    const {pathname} = useLocation()
+    // const {pathname} = useLocation()
     return ( 
         <>
 
             <Sidebar />
-            {pathname === '/' && <Navigate to='/dashboard'/>}
+            {/* {pathname === '/' && <Navigate to='/dashboard'/>} */}
 
             <div className="sidebar">
             <div className="header">
@@ -27,9 +27,9 @@ const Layout = () => {
                     <span>kennethwarui01@gmail.com</span>
                 </div>
             </div>
-            <div className='content'>
+            {/* <div className='content'>
           <Outlet />
-        </div>
+        </div> */}
         </div>
             </div>
         </>
