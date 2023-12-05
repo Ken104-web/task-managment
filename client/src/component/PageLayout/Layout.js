@@ -13,7 +13,6 @@ const Layout = () => {
             <Sidebar />
             {/* <Dashboard /> */}
             {location.pathname === '/' && <Navigate to='/'/>}
-
             <div className="sidebar">
             <div className="header">
                 <span>{moment().format('dddd, Do MMM YYYY')}</span>
