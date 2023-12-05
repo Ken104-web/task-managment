@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout/>}/>
 
-      <Route path='dashboard' element={<Dashboard/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
     </Routes>
     </BrowserRouter>
     </div>

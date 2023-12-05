@@ -1,15 +1,18 @@
-import React from "react";
 import  './Layout.css'
 import moment from "moment/moment";
 import { BiSearch } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import Sidebar from "../Sidebar/sidebar";
-
+import {Navigate, Outlet, useLocation } from 'react-router-dom';
 
 const Layout = () => {
+    const {pathname} = useLocation()
     return ( 
         <>
+
             <Sidebar />
+            {pathname === '/' && <Navigate to='/dashboard'/>}
+
             <div className="sidebar">
             <div className="header">
                 <span>{moment().format('dddd, Do MMM YYYY')}</span>
@@ -24,6 +27,9 @@ const Layout = () => {
                     <span>kennethwarui01@gmail.com</span>
                 </div>
             </div>
+            <div className='content'>
+          <Outlet />
+        </div>
         </div>
             </div>
         </>
