@@ -1,11 +1,11 @@
 import React from "react";
+// import css from './dashboard.css';
 import './dashboard.css'
-
 const Dashboard = () => {
     return ( 
         <div className="ken">
         <div className="dashboardX">
-            <div className="dashboardhead">
+            <div className= {`$ dashboardhead, theme-container`}>
                 <div className="head">
                     <span>Dashboard</span>
                     <div className="durationButton">
@@ -15,6 +15,9 @@ const Dashboard = () => {
                             <option value="">1 year</option>
                         </select>
                     </div>
+                </div>
+                <div className="cards">
+                    cards
                 </div>
             </div>
         </div>

@@ -14,17 +14,17 @@
 
   }
   
-   .dashboardHead {
+   .dashboardhead {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 
   }
   
-  .dashboardHead > .head {
+  .dashboardhead > .head {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .head > :nth-child(1) {
     font-size: 1.5rem;
