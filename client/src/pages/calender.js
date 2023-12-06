@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import timeGridPlugin from '@fullcalendar/timegrid'
+import useCalendar from "../state/calendar";
+import { createEventId } from "../component/data/data";
 import './calender.css'
 
 const Calendar = () => {
+    const { currentEvents, setCurrentEvents } = useCalendar();
+
+    const handleEvents = async (e) => {
+        await Promise.resolve(setCurrentEvents(e))
+    }
+    const handleDateSelect = (selectInfo) => {
+        let title = prompt('please enter title for the event')
+        let calendarApi = selectInfo.view.calendar;
+
+        calendarApi.unselect();
+
+        if (title) {
+            calendarApi.addEvent({
+                id: createEventId(),
+                title,
+                start: selectInfo.start,
+                end: selectInfo.end,
+                allDay: selectInfo.allDay
+            })
+        }
+    }
     return ( 
-    <div className="calender-container">
+    <div className="X">
         <div>
             <FullCalendar
             plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
@@ -25,9 +48,9 @@ const Calendar = () => {
             dayMaxEvents={true}
             weekends={true}
             nowIndicator={true}
-            // initialEvents={currentEvents}
-            // eventsSet={handleEvents}
-            // select={handleDateSelect}
+            initialEvents={currentEvents}
+            eventsSet={handleEvents}
+            select={handleDateSelect}
             // eventClick={handleEventClick}
             />
             </div>

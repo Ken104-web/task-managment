@@ -3,8 +3,9 @@ import moment from "moment/moment";
 import { BiSearch } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import Sidebar from "../Sidebar/sidebar";
-import { Outlet } from 'react-router-dom';
 import Dashboard from '../../pages/dashboard';
+import { Outlet } from 'react-router-dom';
+
 const Layout = () => {
     return ( 
         <>
@@ -27,7 +28,7 @@ const Layout = () => {
             </div>
         </div>
         <Dashboard/>
-        <Outlet />      
+        <Outlet />
             </div>
         </>
      );

@@ -1,9 +1,14 @@
-.calendar-container>div{
-    color: red;
+.X{
+    margin: auto;
+    display: flex;
+    height: 100%;
+    margin-top: 2rem;
+
 }
-.calendar-container>div{
+.X>div{
     margin: auto;
     width: 90%;
     padding: 0rem 5rem;
     max-width: 1100px;
+
 }
