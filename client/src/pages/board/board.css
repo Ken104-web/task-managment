@@ -10,3 +10,10 @@
     text-align: center;
     font-weight: bold;
 }
+/* .react-kanban-board{
+    color:var(--bold-black);
+} */
+.react-kanban-board >:nth-child(1)
+{
+    width: 100%;
+}
