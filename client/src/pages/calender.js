@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -29,6 +28,13 @@ const Calendar = () => {
             })
         }
     }
+    const handleEventClick = (clickInfo) => {
+        if (
+            window.confirm("Are you really deleting this event?")
+        ) {
+            clickInfo.event.remove()
+        }
+    }
     return ( 
     <div className="X">
         <div>
@@ -51,7 +57,7 @@ const Calendar = () => {
             initialEvents={currentEvents}
             eventsSet={handleEvents}
             select={handleDateSelect}
-            // eventClick={handleEventClick}
+            eventClick={handleEventClick}
             />
             </div>
         </div>
