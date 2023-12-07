@@ -2,6 +2,8 @@ import KanabanBoard, { moveCard, moveColumn, removeCard, addCard } from '@assein
 import "@asseinfo/react-kanban/dist/styles.css";
 import useBoard from '../../state/board'
 import './board.css'
+import { RxCross2 } from 'react-icons/rx'
+
 const BoardPage = () => {
     const {board, setBoard} = useBoard()
 
@@ -27,22 +29,23 @@ const BoardPage = () => {
                         onColumnDragEnd={handleColumnMove}
 
                         renderCard = {(props) => (
-                            <div className='kanban-Card' style={getGradient(props)}>
+                            <div className='kanban-Card' style={(props)}>
                                 <div>
                                     <span>
                                         {props.title}
                                     </span>
                                     <button className='remove-button' type='button'
-                                    onClick={() => {
-                                        const updateBoard = removeCard(board,
-                                            getColumn(props)),
-                                            props
+                                    // onClick={() => {
+                                    //     const updateBoard = removeCard(board,
+                                    //         getColumn(props))
+                                    //         props
                                             
-                                    }}
+                                    // }}
                                     >
                                     <RxCross2 color="white" size={15} />
                                     </button>
                                 </div>
+                                <span>{props.description}</span>
                             </div>
     )}
                          

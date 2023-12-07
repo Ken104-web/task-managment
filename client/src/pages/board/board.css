@@ -18,11 +18,22 @@
 {
     width: 100%;
 }
-/* .react-kanban-board>:nth-child(1)> div{
+.react-kanban-board>:nth-child(1)> div{
     width: 24%;
-} */
+}
 .react-kanban-column{
     background-color: var(--transparent-black);
     border-radius: 8px;
 }
+.kanban-Card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--transparent-black);
+    padding: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    border-radius: 5px;
+}
+
 
