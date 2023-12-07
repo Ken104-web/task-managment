@@ -25,6 +25,27 @@ const BoardPage = () => {
                         allowRemoveCard
                         onCardDragEnd={handleCardMove}
                         onColumnDragEnd={handleColumnMove}
+
+                        renderCard = {(props) => (
+                            <div className='kanban-Card' style={getGradient(props)}>
+                                <div>
+                                    <span>
+                                        {props.title}
+                                    </span>
+                                    <button className='remove-button' type='button'
+                                    onClick={() => {
+                                        const updateBoard = removeCard(board,
+                                            getColumn(props)),
+                                            props
+                                            
+                                    }}
+                                    >
+                                    <RxCross2 color="white" size={15} />
+                                    </button>
+                                </div>
+                            </div>
+    )}
+                         
         >
                 {board}
         </KanabanBoard>

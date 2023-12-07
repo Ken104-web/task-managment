@@ -10,10 +10,19 @@
     text-align: center;
     font-weight: bold;
 }
-/* .react-kanban-board{
+.react-kanban-board{
     color:var(--bold-black);
-} */
+}
+
 .react-kanban-board >:nth-child(1)
 {
     width: 100%;
 }
+/* .react-kanban-board>:nth-child(1)> div{
+    width: 24%;
+} */
+.react-kanban-column{
+    background-color: var(--transparent-black);
+    border-radius: 8px;
+}
+
