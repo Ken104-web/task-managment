@@ -23,6 +23,27 @@ const BoardPage = () => {
     const getGradient = (card) => {
         const column = getColumn(card)
         const title = column.title
+        if (title === "TODO") {
+            return {
+                background:
+                    "linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 189, 220) 163.54%)",
+            };
+        } else if (title === "Doing") {
+            return {
+                background:
+                    "linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(220, 48, 48) 163.54%)",
+            };
+        } else if (title === "Completed") {
+            return {
+                background:
+                    "linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 220, 86) 163.54%)",
+            };
+        } else if (title === "Backlog") {
+            return {
+                background:
+                    "linear-gradient(65.35deg, rgba(65, 65,65, 0.67) -1.72%,rgba(134, 48, 220) 163.54%)",
+            };
+        }
     }
     return ( 
         <div className='boardX'>
@@ -44,12 +65,13 @@ const BoardPage = () => {
                                         {props.title}
                                     </span>
                                     <button className='remove-button' type='button'
-                                    // onClick={() => {
-                                    //     const updateBoard = removeCard(board,
-                                    //         getColumn(props))
-                                    //         props
-                                            
-                                    // }}
+                                    onClick={() => {
+                                        const updateBoard = removeCard(board,
+                                            getColumn(props),
+                                            props
+                                            )
+                                            setBoard(updateBoard)
+                                    }}
                                     >
                                     <RxCross2 color="white" size={15} />
                                     </button>
