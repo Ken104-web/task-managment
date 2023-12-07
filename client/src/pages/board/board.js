@@ -15,6 +15,15 @@ const BoardPage = () => {
         const updateBoard = moveCard(board, source, destination)
             setBoard(updateBoard)
     }
+    const getColumn = (card) => {
+        const column = board.columns.filter((column) => column.cards.includes(card))
+        return column[0]
+    }
+
+    const getGradient = (card) => {
+        const column = getColumn(card)
+        const title = column.title
+    }
     return ( 
         <div className='boardX'>
         
@@ -29,7 +38,7 @@ const BoardPage = () => {
                         onColumnDragEnd={handleColumnMove}
 
                         renderCard = {(props) => (
-                            <div className='kanban-Card' style={(props)}>
+                            <div className='kanban-Card' style={getGradient(props)}>
                                 <div>
                                     <span>
                                         {props.title}

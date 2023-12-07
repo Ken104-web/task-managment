@@ -35,5 +35,17 @@
     margin-top: 1.2rem;
     border-radius: 5px;
 }
+.kanban-card>:nth-child(1)
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.remove-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 
