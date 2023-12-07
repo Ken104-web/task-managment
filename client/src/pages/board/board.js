@@ -3,7 +3,9 @@ import "@asseinfo/react-kanban/dist/styles.css";
 import useBoard from '../../state/board'
 import './board.css'
 import { RxCross2 } from 'react-icons/rx'
-
+import { useState } from 'react';
+import { IoMdAdd } from 'react-icons/io'
+import AddCardx from '../../component/addCard/addCard';
 const BoardPage = () => {
     const {board, setBoard} = useBoard()
 
@@ -78,8 +80,34 @@ const BoardPage = () => {
                                 </div>
                                 <span>{props.description}</span>
                             </div>
-    )}
-                         
+    )} 
+    renderColumnHeader={(props) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const [modalOpen, setModalOPen] = useState(false)
+        const handleCardAdd = (title, detail) => {
+            const card = {
+                id: new Date().getTime(),
+                title,
+                description:detail
+            };
+            const updateBoard = addCard(board, props, card)
+            setBoard(updateBoard)
+            setModalOPen(false)
+        }
+        return (
+            <div className='column-Header'>
+            <span>{props.title}</span>
+
+            <IoMdAdd
+                color="white"
+                size={25} title="Add card"
+                onClick={()=>setModalOPen(true)}
+            />
+            <AddCardx visible={modalOpen} handleCardAdd={handleCardAdd}
+                 onClose={() => setModalOPen(false)} />
+        </div>
+        )
+    }}                
         >
                 {board}
         </KanabanBoard>
