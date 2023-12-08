@@ -5,7 +5,6 @@ import { CgProfile } from "react-icons/cg";
 import Sidebar from "../Sidebar/sidebar";
 import Dashboard from '../../pages/dashboard';
 import { Outlet } from 'react-router-dom';
-
 const Layout = () => {
     return ( 
         <>

@@ -154,7 +154,7 @@ const UserDataX = () => {
   return (
   <div className='tableX'>
     <ThemeProvider theme={theme}>
-    <MaterialReactTable table={table} />
+    <MaterialReactTable table={table}/>
     </ThemeProvider>
   </div>
   );

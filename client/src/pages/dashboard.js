@@ -1,6 +1,7 @@
 import React from "react";
 // import css from './dashboard.css';
 import './dashboard.css'
+import Orders from "../component/orders/orders";
 
 const Dashboard = () => {
     return ( 
@@ -23,7 +24,7 @@ const Dashboard = () => {
             </div>
         </div>
         <div className="orders">
-            orders
+            <Orders />
         </div>
         </div>
      );

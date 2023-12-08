@@ -6,18 +6,18 @@ import Calender from './pages/calender';
 import BoardPage from './pages/board/board';
 import UserDataX from './pages/userData/userData/userData';
 
+
 function App() {
   return (
     <div className="dashboard">
 
     <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Layout />} />
+      <Route path="/" element={<Layout />} />
       {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
         <Route path='/calendar' element={<Calender/>}/>
         <Route path='/board' element={<BoardPage/>}/>
         <Route path='/users' element={<UserDataX />}/>
-
     </Routes>
     </BrowserRouter>
     </div>
