@@ -4,7 +4,7 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Layout from './component/PageLayout/Layout';
 import Calender from './pages/calender';
 import BoardPage from './pages/board/board';
-
+import UserData from './pages/userData/userData/userData';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
         <Route path='/calendar' element={<Calender/>}/>
         <Route path='/board' element={<BoardPage/>}/>
+        <Route path='/users' element={<UserData />}/>
 
     </Routes>
     </BrowserRouter>
