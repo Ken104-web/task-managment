@@ -11,13 +11,14 @@ const Orders = () => {
              gap="2rem"
              justifyContent="center"
              alignItems="center"
-             background='blue'
-             height='100px'
-            >Box</Box>
+             fontWeight='bold'
+             color='white'
+             height='40px'
+            >Items For Tasks</Box>
                 <div className='Head'>
                 <img src="./task.webp" alt="logo" />
                 <span>
-                    Notifications
+                    Order By
                 </span>
                 </div>
                 <div className= 'stat'>
