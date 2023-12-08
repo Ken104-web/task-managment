@@ -11,7 +11,9 @@ const Orders = () => {
              gap="2rem"
              justifyContent="center"
              alignItems="center"
-            />
+             background='blue'
+             height='100px'
+            >Box</Box>
                 <div className='Head'>
                 <img src="./task.webp" alt="logo" />
                 <span>
@@ -43,9 +45,9 @@ const Orders = () => {
 
             <div className={css.orderChart}>
                 <span>Split by orders</span>
-                {/* <OrdersPieChart/> */}
             </div>
         </div>
+     
      );
 }
  
