@@ -1,6 +1,7 @@
 
 import { useMemo } from 'react';
 import './userData.css'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -138,7 +139,13 @@ const UserDataX = () => {
     ],
     [],
   );
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const theme = useMemo(() => createTheme({
+    palette: {
+        mode: "dark"
+    }
+  })
+  )
   const table = useMaterialReactTable({
     columns,
     data, 
@@ -146,7 +153,9 @@ const UserDataX = () => {
 
   return (
   <div className='tableX'>
-      <MaterialReactTable table={table} />
+    <ThemeProvider theme={theme}>
+    <MaterialReactTable table={table} />
+    </ThemeProvider>
   </div>
   );
 };
