@@ -18,7 +18,7 @@ const Orders = () => {
                 <div className='Head'>
                 <img src="./task.webp" alt="logo" />
                 <span>
-                    Order By
+                    Notification
                 </span>
                 </div>
                 <div className= 'stat'>
