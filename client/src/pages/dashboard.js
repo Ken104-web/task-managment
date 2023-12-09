@@ -2,7 +2,7 @@ import React from "react";
 // import css from './dashboard.css';
 import './dashboard.css'
 import Orders from "../component/orders/orders";
-
+import Task from "../component/task/task";
 const Dashboard = () => {
     return ( 
         <div className="ken">
@@ -22,6 +22,7 @@ const Dashboard = () => {
                     Here are your todays tasks
                 </div>
             </div>
+            <Task/>
         </div>
         <div className="orders">
             <Orders />
