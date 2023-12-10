@@ -1,5 +1,5 @@
 from flask import Flask, make_response, jsonify
-from models import db
+from models import db, Task
 from flask_restful import Resource, Api
 from flask_migrate import Migrate
 
@@ -16,15 +16,13 @@ db.init_app(app)
 api = Api(app)
 
 
-class Home(Resource):
+class GetTask(Resource):
     def get(self):
-        resp_dict = {
-            "Home": "Welcome to Task Manager"
-        }
-        resp = make_response(
-            jsonify(resp_dict),
+        tasks = [task.to_dict() for task in Task.query.all()]
+        r = make_response(
+            jsonify(tasks),
             200,
         )
-        return resp
-api.add_resource(Home, '/')
+        return r
+api.add_resource(GetTask, '/')
 

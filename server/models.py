@@ -8,3 +8,11 @@ class Task(db.Model):
     name = db.Column(db.String)
     status = db.Column(db.String)
     time = db.Column(db.Integer)
+
+    def to_dict(self):
+        return{
+            'id': self.id,
+            'name': self.name,
+            'status': self.status,
+            'time': self.time
+        }
