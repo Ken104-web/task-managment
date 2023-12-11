@@ -8,6 +8,7 @@ class User(db.Model, SerializerMixin):
 
     serialize_rules = ('-tasks',)
 
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String)
     avatar = db.Column(db.String)
@@ -29,8 +30,10 @@ class Task(db.Model, SerializerMixin):
     # users = db.relationship('User', secondary='task-users', back_populates='tasks')
     taskUser  = db.relationship('TaskUser', backref=('task'))
 
-class TaskUser(db.Model):
+class TaskUser(db.Model, SerializerMixin):
     __tablename__ = 'task_users'
+
+    serialize_rules = ('-user.task_users', '-task.task_users', '-user.tasks.task_users',)
 
     id = db.Column(db.Integer, primary_key=True)
     task_id = db.Column(db.Integer, db.ForeignKey('tasks.id'))
