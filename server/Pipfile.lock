@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f234b976286f32be387b437c0820a10c2d6a28b55f6de877e0493ef65bd27b9b"
+            "sha256": "2d2b6e93f661105d46cfb9e316968c2083d28b37fe082ed86dae47f92bc12976"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -46,6 +46,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==8.1.7"
+        },
+        "faker": {
+            "hashes": [
+                "sha256:562a3a09c3ed3a1a7b20e13d79f904dfdfc5e740f72813ecf95e4cf71e5a2f52",
+                "sha256:aeb3e26742863d1e387f9d156f1c36e14af63bf5e6f36fb39b8c27f6a903be38"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
         },
         "flask": {
             "hashes": [
@@ -249,6 +257,14 @@
             "markers": "python_version >= '3.7'",
             "version": "==2.1.3"
         },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86",
+                "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==2.8.2"
+        },
         "pytz": {
             "hashes": [
                 "sha256:7b4fddbeb94a1eba4b557da24f19fdf9db575192544270a9101d8509f9f43d7b",
@@ -319,12 +335,19 @@
             "markers": "python_version >= '3.7'",
             "version": "==2.0.23"
         },
+        "sqlalchemy-serializer": {
+            "hashes": [
+                "sha256:c4cf3e3eebbffa5b46a77ddb886230e5d8c17fd0b9ddbd57eed1a837eb1463cc"
+            ],
+            "index": "pypi",
+            "version": "==1.4.1"
+        },
         "typing-extensions": {
             "hashes": [
                 "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783",
                 "sha256:af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_version < '3.9'",
             "version": "==4.9.0"
         },
         "werkzeug": {

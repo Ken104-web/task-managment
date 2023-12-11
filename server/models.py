@@ -1,17 +1,23 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy_serializer import SerializerMixin
+
 db = SQLAlchemy()
 
-class User(db.Model):
+class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
 
+    # serialize_rules = ('-tasks',)
+
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    username = db.Column(db.String)
     avatar = db.Column(db.String)
 
     tasks = db.relationship('Task', secondary='task_users', back_populates='users')
 
-class Task(db.Model):
+class Task(db.Model, SerializerMixin):
     __tablename__ = 'tasks'
+
+    # serialize_rules = ('-users',)
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)

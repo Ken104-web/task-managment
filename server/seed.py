@@ -1,6 +1,7 @@
 from app import app
-from models import db, Task
+from models import db, Task, User
 import random
+from faker import Faker
 
 with app.app_context():
     Task.query.delete()
@@ -25,3 +26,4 @@ with app.app_context():
         task.append(assignTask)
         db.session.add_all(task)
         db.session.commit()
+

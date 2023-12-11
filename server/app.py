@@ -26,3 +26,4 @@ class GetTask(Resource):
         return r
 api.add_resource(GetTask, '/')
 
+
