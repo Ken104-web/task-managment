@@ -6,7 +6,7 @@ db = SQLAlchemy()
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
 
-    # serialize_rules = ('-tasks',)
+    serialize_rules = ('-tasks',)
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String)
@@ -18,7 +18,7 @@ class User(db.Model, SerializerMixin):
 class Task(db.Model, SerializerMixin):
     __tablename__ = 'tasks'
 
-    # serialize_rules = ('-users',)
+    serialize_rules = ('-user.tasks',)
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)

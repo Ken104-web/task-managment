@@ -1,13 +1,23 @@
 from app import app
-from models import db, Task, User
+from models import db, Task, User, TaskUser
 import random
 from faker import Faker
 
 fake = Faker()
 
 with app.app_context():
-    Task.query.delete()
     User.query.delete()
+    Task.query.delete()
+
+    users = []
+    for i in range(6):
+        print('**all good**')
+        people = User(username=fake.name(),
+        avatar=fake.emoji()
+        )
+        users.append(people)
+    db.session.add_all(users)
+    db.session.commit()
 
 
     tasks= [
@@ -30,15 +40,12 @@ with app.app_context():
         db.session.add_all(task)
         db.session.commit()
 
-    users = []
+    task_user = []
+
     for i in range(6):
-            print('**still alive**')
-            people = User(username=fake.name(),
-            avatar=fake.internet.avatar()
-            )
-    print('**plz work**')
-    users.append(people)
-    db.session.add_all(users)
+        ts = TaskUser(user_id=random.randint(1, 6), task_id=random.randint(1, 6))
+        task_user.append(ts)
+    db.session.add_all(task_user)
     db.session.commit()
 
 
