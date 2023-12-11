@@ -12,7 +12,8 @@ class User(db.Model, SerializerMixin):
     username = db.Column(db.String)
     avatar = db.Column(db.String)
 
-    tasks = db.relationship('Task', secondary='task_users', back_populates='users')
+    # tasks = db.relationship('Task', secondary='task_users', back_populates='users')
+    taskUser = db.relationship('TaskUser', backref='user')
 
 class Task(db.Model, SerializerMixin):
     __tablename__ = 'tasks'
@@ -24,11 +25,13 @@ class Task(db.Model, SerializerMixin):
     status = db.Column(db.String)
     time = db.Column(db.Integer)
 
-    users = db.relationship('User', secondary='task-users', back_populates='tasks')
+
+    # users = db.relationship('User', secondary='task-users', back_populates='tasks')
+    taskUser  = db.relationship('TaskUser', backref=('task'))
 
 class TaskUser(db.Model):
     __tablename__ = 'task_users'
 
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     task_id = db.Column(db.Integer, db.ForeignKey('tasks.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))

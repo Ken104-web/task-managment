@@ -30,15 +30,15 @@ with app.app_context():
         db.session.add_all(task)
         db.session.commit()
 
-        users = []
-        for i in range(6):
+    users = []
+    for i in range(6):
             print('**still alive**')
             people = User(username=fake.name(),
             avatar=fake.internet.avatar()
             )
-        print('**plz work**')
-        users.append(people)
-        db.session.add_all(users)
-        db.session.commit()
+    print('**plz work**')
+    users.append(people)
+    db.session.add_all(users)
+    db.session.commit()
 
 
