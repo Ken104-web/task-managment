@@ -41,7 +41,7 @@ npm install --prefix client
 - Start the repo
 
 ```sh
-npm run dev
+npm run start
 ```
 # Contriobutors
 
