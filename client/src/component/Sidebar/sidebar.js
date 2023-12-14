@@ -12,7 +12,7 @@ const Sidebar = () => {
 
                 </img>
                 <div className='menu'>
-                    <NavLink to='dashboard' className="item" title='dashboard'>
+                    <NavLink to='/' className="item" title='dashboard'>
                         <MdSpaceDashboard size={30}/>
                     </NavLink>
                     <NavLink

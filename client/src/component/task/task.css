@@ -45,7 +45,6 @@ h3 {
 .taskDetails {
     display: flex;
     flex-direction: column;
-    padding: 0rem 4rem;
     background: #fff;
     align-items: center;
     justify-content: space-between;
@@ -55,9 +54,8 @@ h3 {
 }
 
 .taskDetails span{
-    padding: 1.5rem 2rem;
+    padding: 0rem 2rem;
     border-radius: 5px;
-    /* background-color: #f5f5f5; */
     margin: 0.5rem 0;
 }
 .taskDetails >:nth-child(1)
