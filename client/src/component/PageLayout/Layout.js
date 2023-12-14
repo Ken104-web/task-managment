@@ -21,7 +21,7 @@ const Layout = () => {
             <div className='profile'>
                 <CgProfile size={40}/>
                 <div className="details">
-                    <span>Welcome Kenneth</span>
+                    <span>Welcome User</span>
                     <span>kennethwarui01@gmail.com</span>
                 </div>
             </div>
